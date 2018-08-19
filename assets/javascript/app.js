@@ -1,4 +1,4 @@
-// $(document).ready(function() {
+//  $(document).ready(function() {
 // Initialize Firebase
 var config = {
   apiKey: "AIzaSyB5fC3z9kS9mDQuoM05XGH5z08h-6JQ5Yg",
@@ -31,15 +31,17 @@ var destination = $("#destination-input").val().trim();
 var firstTrain = $("#firstTrain-input").val().trim();
 var frequency = $("#frequency-input").val().trim();
 
+// Uploads train information data to the database
+database.ref().push(trainInformation);
 
+//variable 
 var trainInformation = {
   trainName: trainName,
   destination: destination,
   firstTrain: firstTrain,
   frequency: frequency
 };
-  // Uploads train information data to the database
-  database.ref().push(trainInformation);
+  
 
 //   console.log(trainInformation.trainName);
 
@@ -61,7 +63,7 @@ database.ref().on("child_added", function(childSnapshot){
   console.log(trainInformation.destination);
   console.log(trainInformation.firstTrain);
   console.log(trainInformation.frequency);
-
+  $("#trainName-input").text(snapshot.val().trainName);
     // Create the new row
     var newRow = $("<tr>").append(
         $("<td>").text(trainName),
@@ -72,6 +74,6 @@ database.ref().on("child_added", function(childSnapshot){
       );
     
       // Append the new row to the table
-      $("#employee-table > tbody").append(newRow);
+      $("#scheduleTable > tbody").append(newRow);
 })
 
