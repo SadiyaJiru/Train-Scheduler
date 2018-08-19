@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Train Schedule</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <!-- Added Moment JS -->
+  <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+  <!--Fire base if using app.js then auth.js and database.js need to be added-->
+  <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-database.js"></script>
+
+
+</head>
+
+<body>
+  <div class="jumbotron jumbotron-fluclass myJumbotron">
+    <div class="container">
+      <h1 class="display-4">Train Schedules </h1>
+      <p class="lead">Real time updates.</p>
+    </div>
+  </div>
+
+  <table class="table table1">
+    <thead class="thead-dark">
+      <th scope="col-sm-8">Current Train Schedule </th>
+      <tr>
+        <!-- <label for="heading" class ="heading">Current Train Schedule</label> -->
+
+        <!-- <th scope="col">#</th> -->
+        <th scope="col">Train Name</th>
+        <th scope="col">Destination</th>
+        <th scope="col">Freq(min)</th>
+        <th scope="col">Next Arrival</th>
+        <th scope="col">Minutes Away</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row" class="train1 trainInfo">1</th>
+        <td class="trainInfo">?</td>
+        <td class="trainInfo">?</td>
+        <td class="trainInfo">?</td>
+        <td class="trainInfo">?</td>
+      </tr>
+      <tr>
+        <th scope="row" class="train2 trainInfo">2</th>
+        <td class="trainInfo">?</td>
+        <td class="trainInfo">?</td>
+        <td class="trainInfo">?</td>
+        <td class="trainInfo">?</td>
+      </tr>
+      <tr>
+        <th scope="row" class="train3 trainInfo">3</th>
+        <td class="trainInfo">?</td>
+        <td class="trainInfo">?</td>
+        <td class="trainInfo">?</td>
+        <td class="trainInfo">?</td>
+      </tr>
+      <tr>
+        <th scope="row" class="train4 trainInfo">4</th>
+        <td class="trainInfo">?</td>
+        <td class="trainInfo">?</td>
+        <td class="trainInfo">?</td>
+        <td class="trainInfo">?</td>
+      </tr>
+      <tr>
+        <th scope="row" class="train5 trainInfo">5</th>
+        <td class="trainInfo">?</td>
+        <td class="trainInfo">?</td>
+        <td class="trainInfo">?</td>
+        <td class="trainInfo">?</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <br><br>
+  <!-- <label for="exampleInputEmail1">Add Train</label> -->
+
+  <div class="table2">
+    <form>
+      <div class="form-group">
+        <label for="trainName">Train Name</label>
+        <input class="form-control" id="trainName-input" type="text">
+      </div>
+      <div class="form-group">
+        <label for="destination">Destination</label>
+        <input class="form-control" id="destination-input" type="text">
+      </div>
+      <div class="form-group">
+        <label for="firstTrain">First Train Time</label>
+        <input class="form-control" id="firstTrain-input" type="text">
+        <small class="firstTrain" class="form-text text-muted">(HH:mm -military time)</small>
+        <div class="form-group">
+          <label for="destination">frequency (min)</label>
+          <input class="form-control" id="frequency-input" type="text">
+        </div>
+      </div>
+      <button class="btn btn-primary float-right" id="submitBtn">Submit</button>
+
+    </form>
+  </div>
+
+<!-- jQuery -->
+<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+  <script src="assets/javascript/app.js"></script>
+</body>
+
+</html>

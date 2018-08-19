@@ -1,0 +1,22 @@
+.myJumbotron{
+    background: brown;
+    color: white;
+    text-align: center;
+    font: bold;
+}
+
+.table1{
+    border: solid 5px black;
+    padding: 5%;
+    width: 95%;
+    margin: auto;
+}
+#heading{
+    background: cornflowerblue;
+}
+.table2{
+    border: solid 5px black;
+    padding: 2%;
+    width: 95%;
+    margin: auto;
+}
