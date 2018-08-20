@@ -1,4 +1,4 @@
-//  $(document).ready(function() {
+ $(document).ready(function() {
 // Initialize Firebase
 var config = {
     apiKey: "AIzaSyB5fC3z9kS9mDQuoM05XGH5z08h-6JQ5Yg",
@@ -31,44 +31,44 @@ var config = {
   var firstTrain = $("#firstTrain-input").val().trim();
   var frequency = $("#frequency-input").val().trim();
   
-  // Uploads train information data to the database
-  database.ref().push(trainInformation);
-  
   //variable 
   var trainInformation = {
-    trainName: trainName,
-    destination: destination,
-    firstTrain: firstTrain,
-    frequency: frequency
+    train: trainName,
+    dest: destination,
+    firstT: firstTrain,
+    freq: frequency
   };
-    
-  
-  //   console.log(trainInformation.trainName);
-  
-  
+      // Uploads train information data to the database
+  database.ref().push(trainInformation);
+    // Train Info
+    console.log(trainInformation.train);
+    console.log(trainInformation.destn);
+    console.log(trainInformation.firstT);
+    console.log(trainInformation.freq);
+
     // Clears all of the text-boxes
     $("#trainName-input").val("");
     $("#destination-input").val("");
     $("#firstTrain-input").val("");
     $("#frequency-input").val("");
+
+    alert("Train successfully added");
   });
   database.ref().on("child_added", function(childSnapshot){
+    console.log(childSnapshot.val());
+
         // Store everything into a variable.
-    var trainName = childSnapshot.val().name;
+    var trainName = childSnapshot.val().train;
     var destination = childSnapshot.val().dest;
-    var firstTrain = childSnapshot.val().first;
+    var firstTrain = childSnapshot.val().firstT;
     var frequency = childSnapshot.val().freq;
-    // Train Info
-    console.log(trainInformation.trainName);
-    console.log(trainInformation.destination);
-    console.log(trainInformation.firstTrain);
-    console.log(trainInformation.frequency);
-    $("#trainName-input").text(snapshot.val().trainName);
+
+//////////////////////////////////////////////////
+
       // Create the new row
       var newRow = $("<tr>").append(
           $("<td>").text(trainName),
           $("<td>").text(destination),
-          $("<td>").text(empStartPretty),
           $("<td>").text(firstTrain),
           $("<td>").text(frequency),
         );
@@ -76,4 +76,4 @@ var config = {
         // Append the new row to the table
         $("#scheduleTable > tbody").append(newRow);
   })
-  
+})
