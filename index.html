@@ -35,7 +35,7 @@
         <div class="card">
           <div class="card-body">
             <h2 class="card-title">Current Train Schedule</h2>
-            <table class="table table-sm table-hover" id ="scheduleTable">
+            <table class="table table-sm table-hover" id = "scheduleTable">
               <thead>
                 <tr>
                   <th scope="col">Train Name</th>
@@ -69,15 +69,17 @@
                   <label for="destination">Destination</label>
                   <input class="form-control" id="destination-input" type="text">
                 </div>
+            
                 <div class="form-group">
                   <label for="firstTrain">First Train Time</label>
-                  <input class="form-control" id="firstTrain-input" type="text">
-                  <small class="firstTrain" class="form-text text-muted">(HH:mm -military time)</small>
+                  <input class="form-control" id="frequency-input" type="text">
+                  <small class="freq" class="form-text text-muted">(HH:mm -military time)</small>
+
                 </div>
                 <div class="form-group">
-                  <label for="destination">frequency (min)</label>
-                  <input class="form-control" id="frequency-input" type="text">
-                </div>
+                    <label for="freq">frequency (min)</label>
+                    <input class="form-control" id="firstTrain-input" type="text">
+                  </div>
                 <button class="btn btn-primary float-left" id="submitBtn">Submit</button>
               </form>
             </div>
