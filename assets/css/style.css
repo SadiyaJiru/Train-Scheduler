@@ -1,15 +1,17 @@
+body{
+    background: url("../images/gravel.png")
+}
+
 .myJumbotron{
     background: brown;
     color: white;
     text-align: center;
     font: bold;
-}
-
-.table1{
     
 }
-.table2{
 
+.container{
+    font-family: 'Anton', sans-serif;
+    font-family: 'Bitter', serif;
 }
-
 
